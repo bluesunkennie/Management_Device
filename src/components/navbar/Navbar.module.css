@@ -1,0 +1,47 @@
+.navbar{
+    height:70px;
+    border-bottom: 0.5px solid rgb(231,228,228);
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    color:black;
+}
+.wrapper{
+    width: 100%;
+    padding: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.search{
+    display:flex;
+    align-items:center;
+    border: 0.5px solid lightgray;
+    padding:3px; 
+    width: 30%;   
+    height: 30px;
+    background-color:rgb(214, 203, 203);
+}
+input{
+    border:none;
+    outline:none;
+    padding-left:10px; 
+    background: transparent; 
+}
+.iconItems{
+    display:flex;
+    align-items: center;
+}
+.item{
+    display:flex;
+    align-items:center;
+    margin-right: 30px;
+}
+.item button{
+    background-color:rgb(45, 45, 233);
+    color:white;
+    width:120px;
+    height:40px;
+    border-radius:20px;
+    border:none;
+}

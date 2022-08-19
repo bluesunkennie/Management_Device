@@ -1,0 +1,18 @@
+.list {
+    display: flex;
+    width:100%;
+}
+.listContainer{
+    flex:6
+}
+.detailContent{
+    padding-top: 20px;
+    padding-right: 20px;
+    flex:5;
+}
+/* .rightName{
+    flex:1.5;
+    padding:20px;
+    
+} */
+

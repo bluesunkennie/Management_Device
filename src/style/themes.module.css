@@ -1,0 +1,15 @@
+.app {
+    background-color: #222;
+    color:white;
+  }
+  .chartGrid{
+    stroke: rgba(175, 6, 6, 0.219);
+}
+  .navbar{
+  color:rgb(218, 213, 213);
+  border-color:rgb(58, 56, 56);
+}
+  .sidebar{
+  background-color:#111;
+  border-color:#333;
+  }
