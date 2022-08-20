@@ -6,6 +6,7 @@ import { db } from "../../firebase";
 import Alert from "@mui/material/Alert";
 import isEmpty from "validator/lib/isEmpty";
 import { useNavigate } from "react-router-dom";
+import { SERVER } from "../../constants/constants";
 const AddDevice = () => {
   const device = useNavigate();
   const [inputName, setInputName] = useState("");
@@ -99,13 +100,11 @@ const AddDevice = () => {
     // await uploadSoundUkVocabulary();
     const isValidation = validateAll();
     if (!isValidation) return;
-    axios
-      .post(`http://192.168.1.7:8080/device`, { ...deviceAdd })
-      .then((res) => {
-        setMyAlert(true);
-        // window.location.reload();
-        device("/");
-      });
+    axios.post(`${SERVER}/device`, { ...deviceAdd }).then((res) => {
+      setMyAlert(true);
+      // window.location.reload();
+      device("/");
+    });
   };
   const deviceAdd = {
     name: inputName,

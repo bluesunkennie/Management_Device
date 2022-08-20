@@ -36,6 +36,7 @@ import LaptopWindowsIcon from "@mui/icons-material/LaptopWindows";
 import DeviceInfor from "./Device_Infor";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { SERVER } from "../../constants/constants";
 const Device = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -47,7 +48,7 @@ const Device = () => {
   const [iddetail, setIdDetail] = useState("");
   const getDevice = async () => {
     setLoading(true);
-    axios.get(`http://192.168.1.7:8080/device`).then((res) => {
+    axios.get(`${SERVER}/device`).then((res) => {
       let devices = [];
       res.data.forEach((device) => {
         devices.push({
@@ -105,7 +106,7 @@ const Device = () => {
   };
   const deleteDevice = () => {
     handleClose();
-    axios.delete(`http://192.168.1.7:8080/device?id=${id}`).then((res) => {
+    axios.delete(`${SERVER}/device?id=${id}`).then((res) => {
       window.location.reload();
       console.log(res);
       console.log(res.data);

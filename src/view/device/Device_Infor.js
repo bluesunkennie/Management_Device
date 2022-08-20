@@ -18,13 +18,14 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import classes from "./Device_infor.module.css";
+import { SERVER } from "../../constants/constants";
 const DeviceInfor = () => {
   const [loading, setLoading] = useState(false);
   const [devices, setDevices] = useState([]);
   const { id } = useParams();
   const getDevice = async () => {
     setLoading(true);
-    axios.get(`http://192.168.1.7:8080/device?id=${id}`).then((res) => {
+    axios.get(`${SERVER}/device?id=${id}`).then((res) => {
       let devices;
       devices = {
         comments: res.data.comments,
