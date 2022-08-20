@@ -43,10 +43,6 @@ const Sidebar = () => {
               <SettingsIcon className={classes.icon} />
               <span>Settings</span>
             </li>
-            <hr></hr>
-            <li>
-              <ArrowBackIosNewIcon className={classes.icon} />
-            </li>
           </ul>
         </div>
         <div className={classes.bottom}></div>
