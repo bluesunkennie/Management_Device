@@ -3,8 +3,7 @@ Step 1: Clone project use "git clone https://github.com/bluesunkennie/Management
 Step 2: npm i
 Strp 3: npm start
 
-Requirement
-Flask-Cors: 3.0.10
+
 
 Run API
 Step 1: unzip the file
